@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content = "width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
+  <meta name="apple-mobile-web-app-title" content="onlyWebPro" />
+
+<style type="text/css">
+*{
+    margin:0;
+    padding: 0;
+}
+#poster{
+    width: 60vh;
+    height: 90vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: red;
+    overflow:hidden;
+    background-image: url(bg.png);
+    background-position: center top;
+    background-size: 100%;
+}
+.stair{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.image,.back{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background-image: url(bg.png);
+    background-position: center top;
+    background-size: 100%;
+    z-index: 10;
+    transition: 1s
+}
+.back{
+    background-image: url(dia.svg);
+    background-color: black;
+    background-repeat: no-repeat;
+    z-index: 0;
+    opacity: 0;
+}
+.stair_1.animate .back{
+    transform: scale(1.1);
+    background-image: url(dia.svg), url(Untitled-3-07.png), url(Untitled-3-07.png);
+    background-size: 54.5%,auto 8.17%,auto 8.17%;
+    background-position: left top, left top, right bottom;
+    z-index: 9;
+    opacity: 1;
+    /*8/9*/
+}
+.stair_2.animate .back{
+    transform: scale(0.9);
+    background-image: url(dia.svg), url(Untitled-3-07.png), url(Untitled-3-07.png);
+    background-size: 66.6%,auto 10.6%,auto 10.6%;
+    background-position: left top, left top, right bottom;
+    z-index: 11;
+    opacity: 1;
+    /*8/9*/
+}
+.stair_3.animate .back{
+    transform: scale(0.7);
+    background-image: url(dia.svg), url(Untitled-3-07.png), url(Untitled-3-07.png);
+    background-size: 85%,auto 13.7%,auto 13.7%;
+    background-position: left top, left top, right bottom;
+    z-index: 13;
+    opacity: 1;
+}
+/*6/7*/
+.stair_4.animate .back{
+    transform: scale(0.5);
+    background-image: url(dia.svg), url(Untitled-3-07.png), url(Untitled-3-07.png);
+    background-size: 120%,auto 19.2%,auto 19.2%;
+    background-position: left top, left top, right bottom;
+    z-index: 15;
+    opacity: 1;
+}
+/*4/5*/
+.stair_5.animate .back{
+    transform: scale(0.3);
+    background-image: url(dia.svg), url(Untitled-3-07.png), url(Untitled-3-07.png);
+    background-size: 200%,auto 32%,auto 32%;
+    background-position: left top, left top, right bottom;
+    z-index: 17;
+    opacity: 1;
+}
+.stair_1.animate_rt .back{
+    background-image: url(dia_in.svg);
+    background-position: right top;
+}
+.stair_2.animate_rt .back{
+    background-image: url(dia_in.svg);
+    background-position: right top;
+}
+.stair_3.animate_rt .back{
+    background-image: url(dia_in.svg), url(Untitled-3-09.png);
+    background-position: right top, left bottom;
+}
+.stair_4.animate_rt .back{
+    background-image: url(dia_in.svg), url(Untitled-3-08.png);
+    background-position: right top, left bottom;
+}
+.stair_5.animate_rt .back{
+    background-image: url(dia_in.svg);
+    background-position: right top;
+}
+.stair_1.animate_lt .back{
+    background-image: url(dia.svg), url(Untitled-3-07.png);
+    background-position: right bottom, right 21% bottom;
+}
+.stair_2.animate_lt .back{
+    background-image: url(dia.svg), url(Untitled-3-03.png);
+    background-position: right bottom, right bottom;
+}
+.stair_3.animate_lt .back{
+    background-image: url(dia.svg), url(Untitled-3-05.png);
+    background-position: right bottom, right bottom;
+}
+.stair_4.animate_lt .back{
+    background-image: url(dia.svg), url(Untitled-3-04.png);
+    background-position: right bottom, right bottom;
+}
+.stair_5.animate_lt .back{
+    background-image: url(dia.svg), url(Untitled-3-06.png);
+    background-position: right bottom, right bottom;
+}
+.stair_1.animate_rb .back{
+    background-image: url(dia.svg), url(Untitled-3-07.png);
+    background-position: left top, 10% top;
+}
+.stair_2.animate_rb .back{
+    background-image: url(dia.svg), url(Untitled-3-03.png);
+    background-position: left top, left top;
+}
+.stair_3.animate_rb .back{
+    background-image: url(dia.svg), url(Untitled-3-05.png);
+    background-position: left top, left top;
+}
+.stair_4.animate_rb .back{
+    background-image: url(dia.svg), url(Untitled-3-04.png);
+    background-position: left top, left top;
+}
+.stair_5.animate_rb .back{
+    background-image: url(dia.svg), url(Untitled-3-06.png);
+    background-position: left top, left top;
+}
+.stair_1.animate_rb_2 .back{
+    background-image: url(dia.svg);
+    background-position: left top, left top;
+}
+.stair_2.animate_rb_2 .back{
+    background-image: url(dia.svg);
+    background-position: left top, left top;
+}
+.stair_3.animate_rb_2 .back{
+    background-image: url(dia.svg), url(Untitled-3-11.png);
+    background-position: left top, left top;
+}
+.stair_4.animate_rb_2 .back{
+    background-image: url(dia.svg), url(Untitled-3-10.png);
+    background-position: left top, left top;
+}
+.stair_5.animate_rb_2 .back{
+    background-image: url(dia.svg);
+    background-position: left top, left top;
+}
+
+
+.stair_1.animate .image{
+    transform: scale(1);
+    z-index: 10
+}
+.stair_2.animate .image{
+    transform: scale(0.8);
+    z-index: 12
+}
+.stair_3.animate .image{
+    transform: scale(0.6);
+    z-index: 14
+}
+.stair_4.animate .image{
+    transform: scale(0.4);
+    z-index: 16
+}
+.stair_5.animate .image{
+    transform: scale(0.2);
+    z-index: 18
+}
+.button{
+    position: absolute;
+    z-index: 100000;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+    /*background-color: red*/
+}
+.button_1{
+    background-image: url('b_1.png');
+}
+.button_2{
+    background-image: url('b_2.png')
+}
+.button_3{
+    transform: rotate(-15deg);
+    background-image: url('b_3.png');
+}
+.button_4{
+    background-image: url('b_4.png')
+}
+.button_5{
+    background-image: url('b_5.png');
+}
+.button_in{
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 0;
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+.logo{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 18%;
+    z-index: 100000;
+    margin-left: 10px;
+    margin-bottom: 10px
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+.button_1 .button_in{
+    background-image: url('b_1_w.png');
+    animation-delay: 0.2s
+}
+.button_2 .button_in{
+    background-image: url('b_2_w.png');
+    animation-delay: 0.2s
+}
+.button_3 .button_in{
+    background-image: url('b_3_w.png');
+}
+.button_4 .button_in{
+    background-image: url('b_4_w.png');
+    animation-delay: 0.2s
+}
+.button_5 .button_in{
+    background-image: url('b_5_w.png');
+}
+</style>
+
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var unit = $('#poster').outerHeight()/12
+        var width = $('#poster').outerWidth()
+            var posterw = $('#poster').outerWidth()
+            var posterh = $('#poster').outerHeight()
+        $('.image').css({'height':width + 'px'})
+        $('.back').css({'height':width + 'px'})
+
+$('.button').css({width: 0.1*posterw + 'px', height: 0.1*posterw + 'px'})
+$('.button_3').css({left: 0.5*posterw + 'px',   top: posterh - posterw + 'px',    'height':posterw*0.2 + 'px', 'width':posterw*0.4 + 'px'})
+$('.button_2').css({left: 0.8*posterw + 'px',   top: posterw + 'px',            'height':posterw*0.2 + 'px', 'width':posterw*0.2 + 'px'})
+$('.button_1').css({left: 0,                    top: 0,                             'height':posterw*0.3 + 'px', 'width':posterw*0.3 + 'px'})
+$('.button_4').css({left: 0.8*posterw + 'px',   top: posterh - 0.2*posterw + 'px',  'height':posterw*0.2 + 'px', 'width':posterw*0.2 + 'px'})
+$('.button_5').css({left: 0.5*posterw + 'px',   top: 0.8*posterw + 'px',            'height':posterw*0.2 + 'px', 'width':posterw*0.2 + 'px'})
+
+
+        console.log(unit)
+        document.addEventListener('touchmove', function(e) {
+            e.preventDefault();
+ 
+        }, { passive: false });
+            var poster = document.getElementById('poster')
+            poster.addEventListener('touchstart', function (e) {
+                e.preventDefault();
+                var posx = e.originalEvent.touches[0].x - $('#poster').offset().left
+                var posy = e.originalEvent.touches[0].y - $('#poster').offset().top
+                motion('down', posx, posy)
+            });
+            poster.addEventListener('touchmove', function (e) {
+                var posx = e.originalEvent.touches[0].x - $('#poster').offset().left
+                var posy = e.originalEvent.touches[0].y - $('#poster').offset().top
+                motion('move', posx, posy)
+            });
+            poster.addEventListener('touchend', function (e) {
+                motion('up', 0, 0)
+            });
+            poster.addEventListener('mousedown', function (e) {
+                e.preventDefault();
+                var posx = e.pageX - $('#poster').offset().left
+                var posy = e.pageY - $('#poster').offset().top
+                motion('down', posx, posy)
+            });
+            poster.addEventListener('mousemove', function (e) {
+                var posx = e.pageX - $('#poster').offset().left
+                var posy = e.pageY - $('#poster').offset().top
+                motion('move', posx, posy)
+            });
+            poster.addEventListener('mouseout', function (e) {
+                motion('up', 0, 0)
+            });
+        var rmclass
+        function motion(res, posx, posy) {
+            if (res == 'down') {    
+            }
+            if (res == 'move') { 
+                //  if(posx < posterw*7/10 && posy < posterw*7/10){
+                //     animate(0, 0, 0,0)
+                // }else if(posx > posterw/10*5 && posx < posterw/10*9 && posy > (posterh - posterw*11/10) && posy < (posterh - posterw*9/10)){
+                //     animate(100, 0, -0.3*posterw, posterh - posterw )
+                // }else if(posx > posterw/10*8 && posy > posterw/10*8 && posy < posterw){
+                //     animate(100, 100, 0, 0)
+                // }else if(posx < posterw/10 && posy > posterh - posterw/10){
+                //     animate(0, 100, 0, posterh - posterw )
+                // }else if(posx > posterw/10*9 && posy > posterh - posterw/10){
+                //     animate(100, 100, 0, posterh - posterw )
+                // }else if(posx > posterw/10*5 && posx < posterw/10*7 && posy > posterw/10*8 && posy < posterw){
+                //     animate(100, 100, -0.3*posterw, 0 )
+                // }
+            }
+            if (res == 'up' || res == "out") {
+                    // $('.stair').removeClass('animate')
+            }
+        }
+        $('.button_1').hover(function(){
+            console.log('1')
+                    $('.stair').addClass('animate animate_lt')
+                    $('.back').css({'opacity':1})
+                    $('.back_in').css({'opacity':0})
+                    animate(0, 0, 0.1*posterw,0.1*posterw)
+        }, function(){
+            $('.stair').removeClass('animate')
+            $('.stair').removeClass('animate_lt')
+            $('.stair').removeClass('animate_rt')
+            $('.stair').removeClass('animate_rb')
+            $('.stair').removeClass('animate_rb_2')
+        })
+        $('.button_2').hover(function(){
+            console.log('1')
+                    $('.stair').addClass('animate animate_rb')
+                    $('.back').css({'opacity':1})
+                    $('.back_in').css({'opacity':0})
+                    animate(100, 100, 0, 0.2*posterw)
+        }, function(){
+            $('.stair').removeClass('animate')
+            $('.stair').removeClass('animate_lt')
+            $('.stair').removeClass('animate_rt')
+            $('.stair').removeClass('animate_rb')
+            $('.stair').removeClass('animate_rb_2')
+        })
+        $('.button_3').hover(function(){
+                    $('.stair').addClass('animate animate_rt')
+                    $('.back').css({'opacity':0})
+                    $('.back_in').css({'opacity':1})
+                    animate(100, 0, -0.2*posterw, posterh - posterw )
+        }, function(){
+            $('.stair').removeClass('animate')
+            $('.stair').removeClass('animate_lt')
+            $('.stair').removeClass('animate_rt')
+            $('.stair').removeClass('animate_rb')
+            $('.stair').removeClass('animate_rb_2')
+        })
+        $('.button_4').hover(function(){
+            console.log('1')
+                    $('.stair').addClass('animate animate_rb')
+                    $('.back').css({'opacity':1})
+                    $('.back_in').css({'opacity':0})
+                    animate(100, 100, 0, posterh - posterw )
+        }, function(){
+            $('.stair').removeClass('animate')
+            $('.stair').removeClass('animate_lt')
+            $('.stair').removeClass('animate_rt')
+            $('.stair').removeClass('animate_rb')
+            $('.stair').removeClass('animate_rb_2')
+        })
+        $('.button_5').hover(function(){
+            console.log('1')
+                    $('.stair').addClass('animate animate_rb_2')
+                    $('.back').css({'opacity':1})
+                    $('.back_in').css({'opacity':0})
+                    animate(100, 100, -0.3*posterw, 0 )
+        }, function(){
+            $('.stair').removeClass('animate')
+            $('.stair').removeClass('animate_lt')
+            $('.stair').removeClass('animate_rt')
+            $('.stair').removeClass('animate_rb')
+            $('.stair').removeClass('animate_rb_2')
+        })
+        function animate(orgx, orgy, marx, mary){
+                    clearTimeout(rmclass)
+                    $('.stair').find('.image').css({'transform-origin':orgx+'% ' +orgy+'%'})
+                    $('.stair').find('.back').css({'transform-origin':orgx+'% ' +orgy+'%'})
+
+                    $('.stair').find('.image').css({'margin-top':(mary) + 'px'})
+                    $('.stair').find('.back').css({'margin-top':(mary) + 'px'})
+                    $('.stair').find('.image').css({'background-position': -1*(marx) + 'px ' + -1*(mary) + 'px'})
+                    $('.stair').find('.image').css({'margin-left':(marx) + 'px'})
+                    $('.stair').find('.back').css({'margin-left':(marx) + 'px'})
+        }
+
+    })
+</script>
+<div id="poster">
+    <div class="stair stair_0">
+        <div class="image"></div>
+        <div class="back"></div>
+        <div class="back back_in"></div>
+    </div>
+    <div class="stair stair_1">
+        <div class="image"></div>
+        <div class="back"></div>
+        <div class="back back_in"></div>
+    </div>
+    <div class="stair stair_2">
+        <div class="image"></div>
+        <div class="back"></div>
+        <div class="back back_in"></div>
+    </div>
+    <div class="stair stair_3">
+        <div class="image"></div>
+        <div class="back"></div>
+        <div class="back back_in"></div>
+    </div>
+    <div class="stair stair_4">
+        <div class="image"></div>
+        <div class="back"></div>
+        <div class="back back_in"></div>
+    </div>
+    <div class="stair stair_5">
+        <div class="image"></div>
+        <div class="back"></div>
+        <div class="back back_in"></div>
+    </div>
+    <div class="button button_1">
+        <div class="button_1_in button_in"></div>
+    </div>
+    <div class="button button_2">
+        <div class="button_2_in button_in"></div>
+    </div>
+    <div class="button button_3">
+        <div class="button_3_in button_in"></div>
+    </div>
+    <div class="button button_4">
+        <div class="button_4_in button_in"></div>
+    </div>
+    <div class="button button_5">
+        <div class="button_5_in button_in"></div>
+    </div>
+    <img src="logo.png" class="logo">
+</div>
+</body>
+</html>
