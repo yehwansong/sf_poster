@@ -12,7 +12,7 @@
 }
 #poster{
     width: 60vh;
-    height: 90vh;
+    height: 96vh;
     position: absolute;
     left: 0;
     top: 0;
@@ -38,158 +38,213 @@
     transition: 1s
 }
 .back{
-    background-image: url(dia.svg);
+    background-image: url( );
     background-color: black;
     background-repeat: no-repeat;
     z-index: 0;
     opacity: 0;
 }
 .stair_1.animate .back{
-    transform: scale(1.1);
-    background-image: url(dia.svg), url(text-07.png), url(text-07.png);
-    background-size: 54.5%,auto 8.17%,auto 8.17%;
+    transform: scale(1.19);
+    background-image: url( ), url(text-07.png), url(text-07.png);
+    background-size: 54.5%,auto 7.56%,auto 7.56%;
     background-position: left top, left top, right bottom;
     z-index: 9;
     opacity: 1;
     /*8/9*/
 }
 .stair_2.animate .back{
-    transform: scale(0.9);
-    background-image: url(dia.svg), url(text-07.png), url(text-07.png);
-    background-size: 66.6%,auto 10.6%,auto 10.6%;
+    transform: scale(1.01);
+    background-image: url( ), url(text-07.png), url(text-07.png);
+    background-size: 66.6%,auto 8.91%,auto 8.91%;
     background-position: left top, left top, right bottom;
     z-index: 11;
     opacity: 1;
     /*8/9*/
 }
 .stair_3.animate .back{
-    transform: scale(0.7);
-    background-image: url(dia.svg), url(text-07.png), url(text-07.png);
-    background-size: 85%,auto 13.7%,auto 13.7%;
+    transform: scale(0.83);
+    background-image: url( ), url(text-07.png), url(text-07.png);
+    background-size: 85%,auto 10.84%,auto 10.84%;
     background-position: left top, left top, right bottom;
     z-index: 13;
     opacity: 1;
 }
 /*6/7*/
+/*9/0.65*/
 .stair_4.animate .back{
-    transform: scale(0.5);
-    background-image: url(dia.svg), url(text-07.png), url(text-07.png);
-    background-size: 120%,auto 19.2%,auto 19.2%;
+    transform: scale(0.65);
+    background-image: url( ), url(text-07.png), url(text-07.png);
+    background-size: 120%,auto 13.84%,auto 13.84%;
     background-position: left top, left top, right bottom;
     z-index: 15;
     opacity: 1;
 }
 /*4/5*/
 .stair_5.animate .back{
-    transform: scale(0.3);
-    background-image: url(dia.svg), url(text-07.png), url(text-07.png);
-    background-size: 200%,auto 32%,auto 32%;
+    transform: scale(0.47);
+    background-size: 200%,auto 19.14%,auto 19.14%;
     background-position: left top, left top, right bottom;
     z-index: 17;
     opacity: 1;
 }
-.stair_1.animate_rt .back{
-    background-image: url(dia_in.svg);
-    background-position: right top;
+/*4/5*/
+.stair_6.animate .back{
+    transform: scale(0.29);
+    background-size: 200%,auto 31.03%,auto 31.03%;
+    background-position: left top, left top, right bottom;
+    z-index: 19;
+    opacity: 1;
 }
-.stair_2.animate_rt .back{
-    background-image: url(dia_in.svg);
-    background-position: right top;
-}
-.stair_3.animate_rt .back{
-    background-image: url(dia_in.svg), url(text-09.png);
-    background-position: right top, left bottom;
-}
-.stair_4.animate_rt .back{
-    background-image: url(dia_in.svg), url(text-08.png);
-    background-position: right top, left bottom;
-}
-.stair_5.animate_rt .back{
-    background-image: url(dia_in.svg);
-    background-position: right top;
-}
-.stair_1.animate_lt .back{
-    background-image: url(dia.svg), url(text-07.png);
-    background-position: right bottom, right 21% bottom;
-}
-.stair_2.animate_lt .back{
-    background-image: url(dia.svg), url(text-03.png);
-    background-position: right bottom, right bottom;
-}
-.stair_3.animate_lt .back{
-    background-image: url(dia.svg), url(text-05.png);
-    background-position: right bottom, right bottom;
-}
-.stair_4.animate_lt .back{
-    background-image: url(dia.svg), url(text-04.png);
-    background-position: right bottom, right bottom;
-}
-.stair_5.animate_lt .back{
-    background-image: url(dia.svg), url(text-06.png);
-    background-position: right bottom, right bottom;
-}
-.stair_1.animate_rb .back{
-    background-image: url(dia.svg), url(text-07.png);
-    background-position: left top, 10% top;
-}
-.stair_2.animate_rb .back{
-    background-image: url(dia.svg), url(text-03.png);
-    background-position: left top, left top;
-}
-.stair_3.animate_rb .back{
-    background-image: url(dia.svg), url(text-05.png);
-    background-position: left top, left top;
-}
-.stair_4.animate_rb .back{
-    background-image: url(dia.svg), url(text-04.png);
-    background-position: left top, left top;
-}
-.stair_5.animate_rb .back{
-    background-image: url(dia.svg), url(text-06.png);
-    background-position: left top, left top;
-}
-.stair_1.animate_rb_2 .back{
-    background-image: url(dia.svg);
-    background-position: left top, left top;
-}
-.stair_2.animate_rb_2 .back{
-    background-image: url(dia.svg);
-    background-position: left top, left top;
-}
-.stair_3.animate_rb_2 .back{
-    background-image: url(dia.svg), url(text-11.png);
-    background-position: left top, left top;
-}
-.stair_4.animate_rb_2 .back{
-    background-image: url(dia.svg), url(text-10.png);
-    background-position: left top, left top;
-}
-.stair_5.animate_rb_2 .back{
-    background-image: url(dia.svg);
-    background-position: left top, left top;
-}
-
 
 .stair_1.animate .image{
-    transform: scale(1);
+    transform: scale(1.1);
     z-index: 10
 }
 .stair_2.animate .image{
-    transform: scale(0.8);
+    transform: scale(0.92);
     z-index: 12
 }
 .stair_3.animate .image{
-    transform: scale(0.6);
+    transform: scale(0.74);
     z-index: 14
 }
 .stair_4.animate .image{
-    transform: scale(0.4);
+    transform: scale(0.56);
     z-index: 16
 }
 .stair_5.animate .image{
-    transform: scale(0.2);
+    transform: scale(0.38);
     z-index: 18
 }
+.stair_6.animate .image{
+    transform: scale(0.2);
+    z-index: 20
+}
+
+
+
+.stair_1.animate_b_1 .back{
+    background-image: url();
+    background-position: right bottom, right bottom;
+}
+.stair_2.animate_b_1 .back{
+    background-image: url();
+    background-position: right bottom, right bottom;
+}
+.stair_3.animate_b_1 .back{
+    background-image: url(), url(text/text-11.png);
+    background-position: right bottom, right bottom;
+}
+.stair_4.animate_b_1 .back{
+    background-image: url(), url(text/text-12.png);
+    background-position: right bottom, right bottom;
+}
+.stair_5.animate_b_1 .back{
+    background-image: url();
+    background-position: right bottom, right bottom;
+}
+.stair_6.animate_b_1 .back{
+    background-image: url();
+    background-position: right bottom, right bottom;
+}
+.stair_1.animate_b_2 .back{
+    background-image: url(), url(text/text-02.png);
+    background-position: left top, left top;
+}
+.stair_2.animate_b_2 .back{
+    background-image: url(), url(text/text-03.png);
+    background-position: left top, left top;
+}
+.stair_3.animate_b_2 .back{
+    background-image: url(), url(text/text-04.png);
+    background-position: left top, left top;
+}
+.stair_4.animate_b_2 .back{
+    background-image: url(), url(text/text-05.png);
+    background-position: left top, left top;
+}
+.stair_5.animate_b_2 .back{
+    background-image: url(), url(text/text-06.png);
+    background-position: left top, left top;
+}
+.stair_6.animate_b_2 .back{
+    background-image: url(), url(text/text-07.png);
+    background-position: left top, left top;
+}
+.stair_1.animate_b_3 .back{
+    background-image: url();
+    background-position: left bottom;
+}
+.stair_2.animate_b_3 .back{
+    background-image: url();
+    background-position: left bottom;
+}
+.stair_3.animate_b_3 .back{
+    background-image: url(), url(text/text-09.png);
+    background-position: left bottom;
+}
+.stair_4.animate_b_3 .back{
+    background-image: url(), url(text/text-10.png);
+    background-position: left bottom, left bottom;
+}
+.stair_5.animate_b_3 .back{
+    background-image: url();
+    background-position: left bottom, left bottom;
+}
+.stair_6.animate_b_3 .back{
+    background-image: url();
+    background-position: left bottom;
+}
+.stair_1.animate_b_4 .back{
+    background-image: url(), url(text/text-13.png);
+    background-position: left top, left top;
+}
+.stair_2.animate_b_4 .back{
+    background-image: url(), url(text/text-14.png);
+    background-position: left top, left top;
+}
+.stair_3.animate_b_4 .back{
+    background-image: url(), url(text/text-15.png);
+    background-position: left top, left top;
+}
+.stair_4.animate_b_4 .back{
+    background-image: url();
+    background-position: left top, left top;
+}
+.stair_5.animate_b_4 .back{
+    background-image: url();
+    background-position: left top, left top;
+}
+.stair_6.animate_b_4 .back{
+    background-image: url();
+    background-position: left top, left top;
+}
+.stair_1.animate_b_5 .back{
+    background-image: url( );
+    background-position: left top, left top;
+}
+.stair_2.animate_b_5 .back{
+    background-image: url( );
+    background-position: left top, left top;
+}
+.stair_3.animate_b_5 .back{
+    background-image: url( );
+    background-position: left top, left top;
+}
+.stair_4.animate_b_5 .back{
+    background-image: url( ), url(text/text-08.png);
+    background-position: left top, left top;
+}
+.stair_5.animate_b_5 .back{
+    background-image: url( ), url(text/text-16.png);
+    background-position: left top, left top;
+}
+.stair_6.animate_b_5 .back{
+    background-image: url( );
+    background-position: left top, left top;
+}
+
 .button{
     position: absolute;
     z-index: 100000;
@@ -235,6 +290,12 @@
     margin-left: 10px;
     margin-bottom: 10px
 }
+.bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 100000000000000000000000000000000000
+}
 @keyframes blink-animation {
   to {
     visibility: hidden;
@@ -274,7 +335,7 @@
         var unit = $('#poster').outerHeight()/12
         var width = $('#poster').outerWidth()
             var posterw = $('#poster').outerWidth()
-            var posterh = $('#poster').outerHeight()
+            var posterh = $('#poster').outerHeight()*(90/96)
         $('.image').css({'height':width + 'px'})
         $('.back').css({'height':width + 'px'})
 
@@ -325,19 +386,6 @@ $('.button_5').css({left: 0.5*posterw + 'px',   top: 0.8*posterw + 'px',        
             if (res == 'down') {    
             }
             if (res == 'move') { 
-                //  if(posx < posterw*7/10 && posy < posterw*7/10){
-                //     animate(0, 0, 0,0)
-                // }else if(posx > posterw/10*5 && posx < posterw/10*9 && posy > (posterh - posterw*11/10) && posy < (posterh - posterw*9/10)){
-                //     animate(100, 0, -0.3*posterw, posterh - posterw )
-                // }else if(posx > posterw/10*8 && posy > posterw/10*8 && posy < posterw){
-                //     animate(100, 100, 0, 0)
-                // }else if(posx < posterw/10 && posy > posterh - posterw/10){
-                //     animate(0, 100, 0, posterh - posterw )
-                // }else if(posx > posterw/10*9 && posy > posterh - posterw/10){
-                //     animate(100, 100, 0, posterh - posterw )
-                // }else if(posx > posterw/10*5 && posx < posterw/10*7 && posy > posterw/10*8 && posy < posterw){
-                //     animate(100, 100, -0.3*posterw, 0 )
-                // }
             }
             if (res == 'up' || res == "out") {
                     // $('.stair').removeClass('animate')
@@ -345,67 +393,99 @@ $('.button_5').css({left: 0.5*posterw + 'px',   top: 0.8*posterw + 'px',        
         }
         $('.button_1').hover(function(){
             console.log('1')
-                    $('.stair').addClass('animate animate_lt')
+                    $('.stair').addClass('animate animate_b_1')
                     $('.back').css({'opacity':1})
                     $('.back_in').css({'opacity':0})
                     animate(0, 0, 0.1*posterw,0.1*posterw)
+            $('.button_3').fadeOut(100)
+            $('.button_5').fadeOut(100)
         }, function(){
             $('.stair').removeClass('animate')
-            $('.stair').removeClass('animate_lt')
-            $('.stair').removeClass('animate_rt')
-            $('.stair').removeClass('animate_rb')
-            $('.stair').removeClass('animate_rb_2')
+            $('.stair').removeClass('animate_b_1')
+            $('.stair').removeClass('animate_b_2')
+            $('.stair').removeClass('animate_b_3')
+            $('.stair').removeClass('animate_b_4')
+            $('.stair').removeClass('animate_b_5')
+            $('.button_3').fadeIn(100)
+            $('.button_5').fadeIn(100)
         })
         $('.button_2').hover(function(){
             console.log('1')
-                    $('.stair').addClass('animate animate_rb')
+                    $('.stair').addClass('animate animate_b_2')
                     $('.back').css({'opacity':1})
                     $('.back_in').css({'opacity':0})
                     animate(100, 100, 0, 0.2*posterw)
+                    $('.button_1').fadeOut(100)
+                    $('.button_3').fadeOut(100)
+                    $('.button_5').fadeOut(100)
+                    $('.stair_6 .back').css({'width':'136%'})
+                    $('.stair_6 .back').css({'margin-left':'-36%'})
+                    $('.stair_6 .back').css({ 'background-size': '400%,auto 62.06%,auto 62.06%'})
+
+                    $('.stair_1 .back').css({ 'background-position': 'left top, 5.5vw top'})
+                    $('.stair_6 .image').fadeOut(100)
         }, function(){
             $('.stair').removeClass('animate')
-            $('.stair').removeClass('animate_lt')
-            $('.stair').removeClass('animate_rt')
-            $('.stair').removeClass('animate_rb')
-            $('.stair').removeClass('animate_rb_2')
+            $('.stair').removeClass('animate_b_1')
+            $('.stair').removeClass('animate_b_2')
+            $('.stair').removeClass('animate_b_3')
+            $('.stair').removeClass('animate_b_4')
+            $('.stair').removeClass('animate_b_5')
+            $('.button_1').fadeIn(100)
+            $('.button_3').fadeIn(100)
+            $('.button_5').fadeIn(100)
+                    $('.stair_6 .back').css({'width':'100%'})
+                    $('.stair_6 .back').css({'margin-left':'0'})
+                    $('.stair_6 .back').css({ 'background-size': '400%,auto 31.03%,auto 31.03%'})
+                $('.stair_1 .back').css({ 'background-position': 'left top, left top'})
+                $('.stair_6 .image').fadeIn(100)
+                       
         })
         $('.button_3').hover(function(){
-                    $('.stair').addClass('animate animate_rt')
+                    $('.stair').addClass('animate animate_b_3')
                     $('.back').css({'opacity':0})
                     $('.back_in').css({'opacity':1})
                     animate(100, 0, -0.2*posterw, posterh - posterw )
         }, function(){
             $('.stair').removeClass('animate')
-            $('.stair').removeClass('animate_lt')
-            $('.stair').removeClass('animate_rt')
-            $('.stair').removeClass('animate_rb')
-            $('.stair').removeClass('animate_rb_2')
+            $('.stair').removeClass('animate_b_1')
+            $('.stair').removeClass('animate_b_2')
+            $('.stair').removeClass('animate_b_3')
+            $('.stair').removeClass('animate_b_4')
+            $('.stair').removeClass('animate_b_5')
         })
         $('.button_4').hover(function(){
             console.log('1')
-                    $('.stair').addClass('animate animate_rb')
+                    $('.stair').addClass('animate animate_b_4')
                     $('.back').css({'opacity':1})
                     $('.back_in').css({'opacity':0})
+                    $('.button_3').fadeOut(100)
+                    $('.stair_6 .back').css({ 'background-size': '400%,auto 62.06%,auto 62.06%'})
+                    $('.stair_1 .back').css({ 'background-position': 'left top, 5.5vw top'})
                     animate(100, 100, 0, posterh - posterw )
         }, function(){
             $('.stair').removeClass('animate')
-            $('.stair').removeClass('animate_lt')
-            $('.stair').removeClass('animate_rt')
-            $('.stair').removeClass('animate_rb')
-            $('.stair').removeClass('animate_rb_2')
+            $('.stair').removeClass('animate_b_1')
+            $('.stair').removeClass('animate_b_2')
+            $('.stair').removeClass('animate_b_3')
+            $('.stair').removeClass('animate_b_4')
+            $('.stair').removeClass('animate_b_5')
+                $('.button_3').fadeIn(100)
+                $('.stair_1 .back').css({ 'background-position': 'left top, left top'})
         })
         $('.button_5').hover(function(){
             console.log('1')
-                    $('.stair').addClass('animate animate_rb_2')
+                    $('.stair').addClass('animate animate_b_5')
                     $('.back').css({'opacity':1})
                     $('.back_in').css({'opacity':0})
                     animate(100, 100, -0.3*posterw, 0 )
         }, function(){
             $('.stair').removeClass('animate')
-            $('.stair').removeClass('animate_lt')
-            $('.stair').removeClass('animate_rt')
-            $('.stair').removeClass('animate_rb')
-            $('.stair').removeClass('animate_rb_2')
+            $('.stair').removeClass('animate_b_1')
+            $('.stair').removeClass('animate_b_2')
+            $('.stair').removeClass('animate_b_3')
+            $('.stair').removeClass('animate_b_4')
+            $('.stair').removeClass('animate_b_5')
         })
         function animate(orgx, orgy, marx, mary){
                     clearTimeout(rmclass)
@@ -452,6 +532,11 @@ $('.button_5').css({left: 0.5*posterw + 'px',   top: 0.8*posterw + 'px',        
         <div class="back"></div>
         <div class="back back_in"></div>
     </div>
+    <div class="stair stair_6">
+        <div class="image"></div>
+        <div class="back"></div>
+        <div class="back back_in"></div>
+    </div>
     <div class="button button_1">
         <div class="button_1_in button_in"></div>
     </div>
@@ -467,7 +552,10 @@ $('.button_5').css({left: 0.5*posterw + 'px',   top: 0.8*posterw + 'px',        
     <div class="button button_5">
         <div class="button_5_in button_in"></div>
     </div>
-    <img src="logo.png" class="logo">
+    <div class="button button_6">
+        <div class="button_5_in button_in"></div>
+    </div>
+    <img src="text/bottom-01.png" class="bottom">
 </div>
 </body>
 </html>
