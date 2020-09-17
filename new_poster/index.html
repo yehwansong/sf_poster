@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content = "width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
+  <meta name="apple-mobile-web-app-title" content="onlyWebPro" />
+
+<style type="text/css">
+*{
+    margin:0;
+    padding: 0;
+}
+img{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s
+}
+.whole{
+    pointer-events: none;
+    z-index: 100000;
+    opacity: 0.3
+}
+.whole,.wrapper{
+    height: 100vh;
+    width: 70.6vh;
+    position: absolute;
+}
+.img12{
+    width: 100%;
+}
+.img11{
+    top: 58.8%;
+    width: 40%;
+}
+.img10{
+    width: 51%;
+    bottom: 0;
+    right: 0;
+}
+.img9{
+    width: 17%;
+    right: 0;
+    top: 18%;
+}
+.img8{
+    width: 34%;
+    left: 51%;
+}
+.img7{
+    width: 1.9%;
+    left: 3%;
+    top: 35%;
+}
+.img6{
+    left: 95%;
+    width: 1.8%;
+    top: 34%;
+}
+.img5{
+    left: 85.8%;
+    width: 9%;
+    top: 8.5%;
+}
+.img4{
+    width: 60%;
+    left: 20%;
+    top: 41%;
+}
+.img3{
+    width: 36%;
+    left: 32%;
+    top: 22%;
+}
+.img2{
+    width: 11.44%;
+    left: 44.1%;
+    top: 43.9%;
+}
+.img1{
+    width: 24%;
+    left: 38%;
+    top: 8.5%;
+}
+.button{
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 100
+}
+.button, .img12{
+    opacity: 1
+}
+.button1_in,
+.button2_in,
+.button3_in,
+.button4_in{
+    pointer-events: none;
+    z-index: 10000;
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+.show{
+    opacity: 1
+}
+</style>
+
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var settimeout1
+        var settimeout2
+        var settimeout3
+        $('.button1').hover(function(){
+            $('.img7').addClass('show')
+        },function(){
+            $('.img7').removeClass('show')
+        })
+        $('.button3').hover(function(){
+            $('.img6').addClass('show')
+        },function(){
+            $('.img6').removeClass('show')
+        })
+        $('.button4').hover(function(){
+            $('.img5').addClass('show')
+        },function(){
+            $('.img5').removeClass('show')
+        })
+        $('.button2').hover(function(){
+            $('.img1').addClass('show')
+            settimeout1 = setTimeout(function(){
+                $('.img3').addClass('show')
+            },500)
+            settimeout2 = setTimeout(function(){
+                $('.img4').addClass('show')
+            },1000)
+            settimeout3 = setTimeout(function(){
+                $('.img2').addClass('show')
+            },1200)
+        },function(){
+            console.log('dsakfl;akdfj;lkadsjf;lakj;')
+            clearTimeout(settimeout1)
+            clearTimeout(settimeout2)
+            clearTimeout(settimeout3)
+                $('.img1').removeClass('show')
+                $('.img2').removeClass('show')
+                $('.img3').removeClass('show')
+                $('.img4').removeClass('show')
+
+        })
+    })
+</script>
+<!-- <img class="whole" src="whole.png"> -->
+<div class="wrapper">
+    <img class="img12" src="12.png">
+    <img class="button button1 img11" src="11.png">
+    <img class="button button2 img10" src="10.png">
+    <img class="button button3 img9" src="9.png">
+    <img class="button button4 img8" src="8.png">
+    <img class="button button1_in button1 img11" src="11_black.png">
+    <img class="button button2_in button2 img10" src="10_black.png">
+    <img class="button button3_in button3 img9" src="9_black.png">
+    <img class="button button4_in button4 img8" src="8_black.png">
+    <img class="img7" src="7.png">
+    <img class="img6" src="6.png">
+    <img class="img5" src="5.png">
+    <img class="img4" src="4.png">
+    <img class="img3" src="3.png">
+    <img class="img2" src="2.png">
+    <img class="img1" src="1.png">
+</div>
+</body>
+</html>
