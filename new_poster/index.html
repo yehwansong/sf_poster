@@ -138,31 +138,29 @@ img{
         })
         $('.button3').hover(function(){
             $('.img6').addClass('show')
-        },function(){
-            $('.img6').removeClass('show')
-        })
-        $('.button4').hover(function(){
             $('.img5').addClass('show')
         },function(){
+            $('.img6').removeClass('show')
             $('.img5').removeClass('show')
         })
-        $('.button2').hover(function(){
+        $('.button4').hover(function(){
             $('.img1').addClass('show')
+        },function(){
+            $('.img1').removeClass('show')
+        })
+        $('.button2').hover(function(){
+            $('.img3').addClass('show')
             settimeout1 = setTimeout(function(){
-                $('.img3').addClass('show')
+                $('.img4').addClass('show')
             },500)
             settimeout2 = setTimeout(function(){
-                $('.img4').addClass('show')
-            },1000)
-            settimeout3 = setTimeout(function(){
                 $('.img2').addClass('show')
-            },1200)
+            },700)
         },function(){
             console.log('dsakfl;akdfj;lkadsjf;lakj;')
             clearTimeout(settimeout1)
             clearTimeout(settimeout2)
             clearTimeout(settimeout3)
-                $('.img1').removeClass('show')
                 $('.img2').removeClass('show')
                 $('.img3').removeClass('show')
                 $('.img4').removeClass('show')
