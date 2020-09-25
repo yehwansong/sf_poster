@@ -84,6 +84,9 @@ img{
     left: 38%;
     top: 8.5%;
 }
+.upper_mobile{
+    display: none;
+}
 .bottom{
     width: 100%;
     bottom: 0;
@@ -134,9 +137,21 @@ img{
         background:black;
     }
     .whole,.wrapper{
-        height: 141.64vw;
+        height: 100%;
         width: 100vw;
         position: absolute;
+    }
+    .img12{
+        width: auto
+    }
+    .upper_mobile{
+        opacity: 1;
+        position: fixed;
+        right: 0;
+        height: 100%;
+        top: 0;
+        z-index: 1000;
+        display: block;
     }
 }
 </style>
@@ -191,6 +206,7 @@ img{
 <div class="wrapper">
     <img class="upperlayer" src="upperlayer-02.png">
     <img class="img12" src="12.png">
+    <img class="upper_mobile" src="upperlayer_2.png">
     <img class="button button1 img11" src="11.png">
     <img class="button button2 img10" src="10.png">
     <img class="button button3 img9" src="9.png">
